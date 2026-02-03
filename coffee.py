@@ -1,11 +1,11 @@
 check = [50,20,10,5]
 def get_coin():
-    coin = int(input("Insert cash [50p/20p/10p/5p]: ").replace("p",""))
-    if coin in check:
-        return coin
-    else:
-        print("please insert only [50p/20p/10p/5p]: ")
-        return get_coin()
+    while True:
+        coin = int(input("Insert cash [50p/20p/10p/5p]: ").replace("p",""))
+        if coin in check:
+            return coin
+        else:
+            print("please insert only [50p/20p/10p/5p]: ")
     
 def update_total(current, coin):
     current = current - coin
